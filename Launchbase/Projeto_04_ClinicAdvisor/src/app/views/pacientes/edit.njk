@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+<div class="card" >
+  <section
+    class="avatar"
+    style="background: url({{ paciente.avatar_url }}) no-repeat center center / cover">
+  </section>
+
+  <section class="details">
+    <form method="post" action="/pacientes?_method=PUT">
+
+        <h3>Editar Paciente</h3>
+        
+        {% include 'pacientes/fields.njk' %}
+
+        <input
+          type="hidden"
+          name="id"
+          value="{{ paciente.id }}">
+    </form>
+
+    <form id="form-delete" method="post" action="/pacientes?_method=DELETE">
+      <input type="hidden" name="id" value="{{ paciente.id }}">
+      <button type="submit">Deletar</button>
+    </form>
+
+    <script>
+      const formDelete = document.querySelector('#form-delete');
+      formDelete.addEventListener("submit", function(event){
+        const confirmation = confirm("Tem certeza que deseja deletar as informações de {{ paciente.name }}")
+        if (!confirmation) {
+          event.preventDefault();
+          }
+      });
+    </script>
+
+  </section>
+</div>
+
+{% endblock content %}

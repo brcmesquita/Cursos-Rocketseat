@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <ul id="lista"></ul>
+    <body>
+        <script>
+          // Módulo 2 - Exercícios
+          // Exercício 3
+          var nomes = ["Diego", "Gabriel", "Lucas", "Raphael", "Cabral"];
+
+          const ul = document.getElementById('lista')
+
+          for (let item of nomes){
+            const lista = document.createElement('li')
+            lista.innerText = item
+            ul.appendChild(lista)
+          }
+
+          
+          
+        </script>
+    </body>
+</html>

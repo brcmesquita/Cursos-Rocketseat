@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <style>
+          #box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+          }
+        </style>
+    </head>
+    <body>
+      <div id="app">
+        <div id="box">
+        </div>
+      </div>
+
+      <script>
+        // Módulo 2 - Exercícios
+        // Exercício 2
+        const box = document.getElementById('box')
+        
+        function getRandomColor() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+        
+        function trocaCor() {
+          box.style.backgroundColor = newColor
+        }
+
+        box.addEventListener("mouseover", trocaCor)
+        </script>
+    </body>
+</html>

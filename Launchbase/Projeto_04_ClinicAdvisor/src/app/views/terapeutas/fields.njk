@@ -1,0 +1,148 @@
+<div class="item">
+  <div>
+    Avatar URL
+  </div>
+  <div>
+    <input
+      type="url"
+      name="avatar_url"
+      placeholder="http://"
+      value="{{ terapeuta.avatar_url}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Terapeuta
+  </div>
+  <div>
+    <input
+      type="text"
+      name="name"
+      placeholder="Nome do Terapeuta"
+      value="{{ terapeuta.name}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    E-mail
+  </div>
+  <div>
+    <input
+      type="email"
+      name="email"
+      placeholder="email@provedor.com.br"
+      value="{{ terapeuta.email}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Senha
+  </div>
+  <div>
+    <input
+      type="password"
+      name="passwd"
+      placeholder="Digite uma senha"
+      value="{{ terapeuta.passwd}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Data de Nascimento
+  </div>
+  <div>
+    <input
+      type="date"
+      name="birth"
+      value="{{ terapeuta.birth}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Gênero
+  </div>
+  <div>
+    <span>
+      <input type="radio" name="gender" value="M"
+        {% if terapeuta.gender == "M" %}
+          checked
+        {% endif %}
+      > Masculino
+    </span>
+    <span>
+      <input type="radio" name="gender" value="F"
+        {% if terapeuta.gender == "F" %}
+          checked
+        {% endif %}
+      > Feminino
+      </span>
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Especialidades
+  </div>
+  <div>
+    <input
+      type="text"
+      name="services"
+      placeholder="Digite a especialidade"
+      value="{{ terapeuta.services }}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Telefone
+  </div>
+  <div>
+    <input
+      type="text"
+      name="phone"
+      placeholder="(79) 0000-0000"
+      value="{{ terapeuta.phone }}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Tel. Celular
+  </div>
+  <div>
+    <input
+      type="text"
+      name="cellphone"
+      placeholder="(79) 00000-0000"
+      value="{{ terapeuta.cellphone }}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Endereço Completo
+  </div>
+  <div>
+    <input
+      type="text"
+      name="address"
+      placeholder="Digite o endereço completo"
+      value="{{ terapeuta.address }}"
+      >
+  </div>
+</div>
+
+<button type="submit">Salvar</button>

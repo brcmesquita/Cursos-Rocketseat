@@ -1,0 +1,64 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+
+  <div class="header">
+    <a class="button" href="/terapeutas/create">Novo</a>
+    <form action="/terapeutas" method="GET">
+      <input
+        type="text"
+        name="filter"
+        placeholder="Nome ou Atendimento"
+        value={{filter}}
+        >
+      <button type="submit">
+        Filtrar
+      </button>
+    </form>
+  </div>
+
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Terapeuta</th>
+        <th>Especialidades</th>
+        <th>Pacientes</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for terapeuta in terapeutas %}
+      <tr>
+        <td>
+          <span
+            style="background-image: url({{ terapeuta.avatar_url }})">
+          </span>
+          {{ terapeuta.name }}
+        </td>
+        <td>
+          {{ terapeuta.services }}
+        </td>
+        <td>
+          {{ terapeuta.total_pacientes }}
+        </td>
+        <td>
+          <a href="/terapeutas/{{ terapeuta.id }}">
+            Ver
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div
+    class="pagination"
+    data-page={{pagination.page}}
+    data-total={{pagination.total}}
+    data-filter={{filter}}
+    >
+  </div>
+  
+</div>
+{% endblock content %}

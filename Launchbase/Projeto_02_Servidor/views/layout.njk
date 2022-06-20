@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  {% block head %}
+
+  <title>Bruno Raphael</title>
+
+  {% endblock %}
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="links">
+      <a href="/">Sobre</a>
+      <a href="/portfolio">Portfolio</a>
+    </div>
+  </header>
+
+  {% block content %}
+
+  {% endblock %}
+
+</body>
+
+</html>

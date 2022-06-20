@@ -1,0 +1,88 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card">
+  <section class="avatar" style="background: url({{ paciente.avatar_url }}) no-repeat center center / cover"></section>
+  <section class="details">
+    <h3>Detalhes</h3>
+    <div class="item">
+      <div>Terapeuta</div>
+      <div>{{ paciente.name }}</div>
+    </div>
+    <div class="item">
+      <div>Idade</div>
+      <div>{{ paciente.age }}</div>
+    </div>
+    <div class="item">
+      <div>Aniversário</div>
+      <div>{{ paciente.birth }}</div>
+    </div>
+    <div class="item">
+      <div>Gênero</div>
+      <div>{{ "Masculino" if paciente.gender == "M" else "Feminino" }}</div>
+    </div>
+     <div class="item">
+      <div>Tipo Sanguíneo</div>
+      <div>
+        {% if paciente.blood == "A0"%}A-{% endif %}
+        {% if paciente.blood == "A1"%}A+{% endif %}
+        {% if paciente.blood == "B0"%}B-{% endif %}
+        {% if paciente.blood == "B1"%}B+{% endif %}
+        {% if paciente.blood == "AB0"%}AB-{% endif %}
+        {% if paciente.blood == "AB1"%}AB+{% endif %}
+        {% if paciente.blood == "O0"%}O-{% endif %}
+        {% if paciente.blood == "O1"%}O+{% endif %}
+      </div>
+    </div>
+    <div class="item">
+      <div>Peso</div>
+      <div>{{ paciente.weight }} cm</div>
+    </div>
+
+    <div class="item">
+      <div>Altura</div>
+      <div>{{ paciente.height }} kg</div>
+    </div>
+    
+    <div class="item">
+      <div>Terapeuta</div>
+      <div>{{ paciente.terapeuta_name }}</div>
+    </div>
+    
+    <div class="item">
+      <div>Especialidades</div>
+      <div>
+        {% for service in paciente.services %}
+        <span>{{ service }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="item">
+      <div>Status</div>
+      <div>{{ "Em processo" if paciente.status == true else "Alta" }}</div>
+    </div>
+     <div class="item">
+      <div>Telefone Fixo</div>
+      <div>{{ paciente.phone }}</div>
+    </div>
+     <div class="item">
+      <div>Telefone Celular</div>
+      <div>{{ paciente.cellphone }}</div>
+    </div>
+    <div class="item">
+      <div>E-mail</div>
+      <div>{{ paciente.email }}</div>
+    </div>
+     <div class="item">
+      <div>Endereço</div>
+      <div>{{ paciente.address }}</div>
+    </div>
+    <div class="item">
+      <div>Cadastro</div>
+      <div>{{ paciente.created_at }}</div>
+    </div>
+
+    <a href="/pacientes/{{ paciente.id }}/edit" class="button">Editar</a>
+  </section>
+</div>
+{% endblock content %}

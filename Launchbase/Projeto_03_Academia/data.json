@@ -1,0 +1,49 @@
+{
+  "terapeutas": [
+    {
+      "id": 1,
+      "name": "Stéphanie Nunes",
+      "birth": 505526400000,
+      "gender": "F",
+      "services": "Psicologia, Musicoterapia, Terapia ABA, Supervisão",
+      "avatar_url": "https://scontent.faju2-1.fna.fbcdn.net/v/t39.30808-6/235540170_1004759537003213_5875955252858938840_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=jZ3_G2IupMwAX9cnBYb&_nc_ht=scontent.faju2-1.fna&oh=00_AT_FsMwXlOh56KBykzNeVxklylT1HyZKHLtMZ7Ru1O5NLA&oe=6267277E",
+      "working": true,
+      "created_at": 1650573678197
+    },
+    {
+      "id": 2,
+      "name": "Izabella Souza",
+      "birth": 729561600000,
+      "gender": "F",
+      "services": "Fonoaudiologia",
+      "avatar_url": "https://scontent.faju2-1.fna.fbcdn.net/v/t31.18172-8/12698520_947089318731287_639875405358437237_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=guSzYrXpkL0AX_sxAya&_nc_ht=scontent.faju2-1.fna&oh=00_AT9mZWhHWPrUCeFdglQACe7FZjci3mkUCMXfPZOKHW_n-A&oe=62880F83",
+      "working": true,
+      "created_at": 1650632464948
+    },
+    {
+      "id": 3,
+      "name": "Bruno Raphael",
+      "birth": 458438400000,
+      "gender": "M",
+      "services": "Software Engineer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13441032?v=4",
+      "working": true,
+      "created_at": 1650632563584
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/13441032?v=4",
+      "name": "Bruno Raphael",
+      "email": "brcmesquita@gmail.com",
+      "birth": null,
+      "gender": "M",
+      "blood": "B0",
+      "weight": "105",
+      "height": "177",
+      "services": "Psicologia",
+      "created_at": 1650632701081
+    }
+  ]
+}

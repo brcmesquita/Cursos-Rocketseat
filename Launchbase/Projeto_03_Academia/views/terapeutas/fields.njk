@@ -1,0 +1,78 @@
+<div class="item">
+  <div>
+    Avatar URL
+  </div>
+  <div>
+    <input
+      type="url"
+      name="avatar_url"
+      placeholder="http://"
+      value="{{ terapeuta.avatar_url}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Terapeuta
+  </div>
+  <div>
+    <input
+      type="text"
+      name="name"
+      placeholder="Nome do Terapeuta"
+      value="{{ terapeuta.name}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Data de Nascimento
+  </div>
+  <div>
+    <input
+      type="date"
+      name="birth"
+      value="{{ terapeuta.birth}}"
+      >
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Gênero
+  </div>
+  <div>
+    <span>
+      <input type="radio" name="gender" value="M"
+        {% if terapeuta.gender == "M" %}
+          checked
+        {% endif %}
+      > Masculino
+    </span>
+    <span>
+      <input type="radio" name="gender" value="F"
+        {% if terapeuta.gender == "F" %}
+          checked
+        {% endif %}
+      > Feminino
+      </span>
+  </div>
+</div>
+
+<div class="item">
+  <div>
+    Especialidades
+  </div>
+  <div>
+    <input
+      type="text"
+      name="services"
+      placeholder="Digite a especialidade"
+      value="{{ terapeuta.services }}"
+      >
+  </div>
+</div>
+
+<button type="submit">Salvar</button>

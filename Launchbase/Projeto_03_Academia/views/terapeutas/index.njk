@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card table-container">
+  <a href="/terapeutas/create">Novo</a>
+  <table width="100%">
+    <thead>
+      <tr>
+        <th>Terapeuta</th>
+        <th>Especialidades</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for terapeuta in terapeutas %}
+      <tr>
+         
+        <td>
+           <span
+            style="background-image: url({{ terapeuta.avatar_url }})">
+          </span>
+          {{ terapeuta.name }}</td>
+        <td>{{ terapeuta.services }}</td>
+        <td><a href="/terapeutas/{{ terapeuta.id }}">Ver</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

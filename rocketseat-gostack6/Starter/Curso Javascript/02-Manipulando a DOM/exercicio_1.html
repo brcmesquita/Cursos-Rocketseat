@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+    <div id="app">
+      <button id="botao">Clique!</button>
+    </div>
+    <div class="corpo">
+
+    </div>
+        <script>
+          // Módulo 2 - Exercícios
+          // Exercício 1
+
+          var botao = document.getElementById('botao')
+          botao.addEventListener("click", () => {
+            //  seleciona a classe "corpo", 
+            //  x será um array pois pode haver mais de uma classe
+            var app = document.getElementById("app")
+            console.log(app);
+          
+            // cria um elemento "div" e seta uma classe "box"
+            var boxElement = document.createElement('div')
+            boxElement.setAttribute('id', 'box')
+
+            // anexa a "div" criada com o novo conteúdo 
+            // dentro da "div" classe "corpo"
+            app.appendChild(boxElement)
+
+            // var boxElement = document.getElementById("box")
+            boxElement.style.width = 100
+            boxElement.style.height = 100
+            boxElement.style.backgroundColor = "#F00"
+
+// Vamos pegar a div corpo e colocá-la dentro de uma constante para ficar mais fácil de manipular.
+const corpo = document.querySelector('.corpo')
+
+// Vamos criar os elementos que irão ficar dentro da div corpo
+// Pra isso vamos criar uma constante para a div tudo, que ir´á receber as demais divs
+const tudo = document.createElement('div')
+// Vamos setar os atributos da div, dando uma classe e o nome "tudo" à classe com o setAttribute
+tudo.setAttribute('class', 'tudo')
+
+// Vamos repetir o que fizemos acima para os demais divs que ficarão dentro da div "tudo"
+// esquerda
+const esquerda = document.createElement('div')
+esquerda.setAttribute('class', 'esquerda')
+
+// meio
+const meio = document.createElement('div')
+meio.setAttribute('class', 'meio')
+
+// direita
+const direita = document.createElement('div')
+direita.setAttribute('class', 'direita')
+
+// Vamos adicionar a div tudo dentro da div corpo
+corpo.appendChild(tudo)
+
+// Com a div tudo dentro da div corpo, agora podemos ir adicionando as divs esquerda, meio e direita dentro da div tudo
+tudo.appendChild(esquerda)
+tudo.appendChild(meio)
+tudo.appendChild(direita)
+          })
+        </script>
+    </body>
+</html>
