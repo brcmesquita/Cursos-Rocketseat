@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketseat - Javascript</title>
+</head>
+
+<body>
+  <h1>Introdução - Desafios</h1>
+
+  <div id="app"></div>
+
+  <script>
+    // Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript" e retorna um booleano true / false caso exista ou não.
+
+    function temHabilidade(skills) {
+      const index = skills.indexOf('Javascript');
+
+      if (index) return false
+
+      return true
+    }
+
+    var skills = ["Javascript", "ReactJS", "React Native"];
+
+    console.log(temHabilidade(skills)); // true ou false
+
+    // Dica: para verificar se um vetor contém um valor, utilize o método indexOf.
+
+  </script>
+
+</body>
+
+</html>

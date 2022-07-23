@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketseat - Javascript</title>
+</head>
+
+<body>
+  <h1>Introdução - Desafios</h1>
+
+  <div id="app"></div>
+
+  <script>
+    var htmlApp = document.getElementById('app');
+
+    // Dado o seguinte vetor de objetos:
+
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+
+    // Escreva uma função que produza o seguinte resultado:
+    // O Diego possui as habilidades: Javascript, ReactJS, Redux
+    // O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+
+    // Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array com um separador utilize o join.
+
+    for (usuario of usuarios) {
+      console.log(
+        `O ${usuario.nome} possui as habilidades: ${usuario.habilidades}`
+      );
+
+      htmlApp.innerHTML += `O ${usuario.nome} possui as habilidades: ${usuario.habilidades.join(', ')}<br />`;
+    }
+
+  </script>
+
+</body>
+
+</html>

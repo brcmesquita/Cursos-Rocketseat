@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketseat - Javascript</title>
+</head>
+
+<body>
+  <h1>Introdução - Desafios</h1>
+
+  <div id="app"></div>
+
+  <script>
+    // Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+
+    const htmlApp = document.getElementById('app');
+
+    function pares(x, y) {
+      for (i = x; i < y; i++) {
+        if (i % 2 === 0) {
+          console.log(i);
+          htmlApp.innerHTML += `${i}<br>`;
+        }
+      }
+    }
+
+    console.log(pares(32, 321));
+
+  </script>
+
+</body>
+
+</html>
