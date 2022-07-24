@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketseat - Javascript</title>
+</head>
+
+<body>
+  <h1>Introdução - Desafios</h1>
+
+  <div id="app">
+    <ul id="lista"></ul>
+  </div>
+
+  <script>
+    // A partir do seguinte vetor:
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    // Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+    // - Diego
+    // - Gabriel
+    // - Lucas
+
+    const lista = document.getElementById('lista')
+
+    for (nome of nomes) {
+      const li = document.createElement('li')
+      li.innerText = nome
+      lista.append(li)
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

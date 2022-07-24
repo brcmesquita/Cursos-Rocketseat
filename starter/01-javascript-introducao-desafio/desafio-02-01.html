@@ -11,6 +11,7 @@
 <body>
   <h1>Introdução - Desafios</h1>
 
+  <button id="botao">Criar Caixa</button>
   <div id="app"></div>
 
   <script>
@@ -18,25 +19,21 @@
     // com a forma de um quadrado vermelho com 100px de altura e largura.
     // Sempre que o botão for clicado um novo quadrado deve aparecer na tela.
 
-    var box = document.createElement('div');
-    box.style.backgroundColor = 'red';
-    box.style.width = '100px';
-    box.style.height = '100px';
+    var botao = document.getElementById('botao')
+    botao.addEventListener("click", () => {
 
-    var htmlApp = document.querySelector('#app');
+      var app = document.getElementById("app")
+      console.log(app);
 
-    htmlApp.append(box);
-    htmlApp.append += html.append(box)
-    htmlApp.append += html.append(box)
-    htmlApp.append += html.append(box)
+      var boxElement = document.createElement('div')
+      boxElement.setAttribute('id', 'box')
 
+      app.appendChild(boxElement)
 
-
-
-
-
-
-
+      boxElement.style.width = '100px'
+      boxElement.style.height = '100px'
+      boxElement.style.backgroundColor = "#F00"
+    })
   </script>
 
 </body>

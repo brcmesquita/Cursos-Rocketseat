@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketseat - Javascript</title>
+</head>
+
+<body>
+  <h1>Introdução - Desafios</h1>
+
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>
+
+  <div id="app">
+    <ul id="lista"></ul>
+  </div>
+
+  <script>
+    // Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+    // <input type="text" name="nome">
+    // <button onClick="adicionar()">Adicionar</button>
+    // Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+    // nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+    // demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    const lista = document.getElementById('lista')
+
+    function renderizarNomes() {
+      for (nome of nomes) {
+        const li = document.createElement('li')
+        li.innerText = nome
+        lista.append(li)
+      }
+    }
+
+    const inputText = document.querySelector('input');
+
+    function adicionar() {
+      nomes.push(inputText.value);
+      lista.innerHTML = ''
+      inputText.value = ''
+      renderizarNomes();
+
+    }
+
+    renderizarNomes();
+
+  </script>
+
+</body>
+
+</html>
